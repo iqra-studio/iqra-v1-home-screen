@@ -1,0 +1,14 @@
+import { useRouter } from 'expo-router';
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+
+import { themes } from '@/theme/colors';
+import { useTheme } from '@/theme/ThemeContext';
+import Icon from './home/Icon';
+
+export default function ProfileScreen() {
+  const { theme } = useTheme();
+  const router = useRouter();
+  return <SafeAreaView style={[styles.safe, { backgroundColor: theme.main }]}><View style={styles.content}><View style={[styles.avatar, { backgroundColor: theme.accentLight }]}><Icon name="user" size={50} color={theme.accent} /></View><Text style={[styles.name, { color: theme.textPrimary }]}>Misafir Kullanıcı</Text><Text style={[styles.email, { color: theme.textMuted }]}>Hesap bağlı değil</Text><View style={[styles.warning, { backgroundColor: theme.cardBg, borderColor: theme.cardBorder }]}><Text style={[styles.warningText, { color: theme.textSecondary }]}>Okuma ilerlemenizi senkronize etmek için Google hesabınızı bağlayın.</Text><Pressable style={[styles.google, { backgroundColor: theme.accent }]}><Icon name="g.circle.fill" size={17} color={themes.global.white} /><Text style={[styles.googleText, { color: themes.global.white }]}>Google ile Bağlan</Text></Pressable></View><Pressable onPress={() => router.push('/settings' as never)} style={[styles.menu, { backgroundColor: theme.cardBg, borderColor: theme.cardBorder }]}><View style={styles.menuLabel}><Icon name="gearshape" size={19} color={theme.accent} /><Text style={[styles.menuText, { color: theme.textPrimary }]}>Ayarlar</Text></View><Icon name="chevron.right" size={17} color={theme.textMuted} /></Pressable></View></SafeAreaView>;
+}
+
+const styles = StyleSheet.create({ safe: { flex: 1 }, content: { alignItems: 'center', gap: 12, padding: 20 }, avatar: { alignItems: 'center', borderRadius: 50, height: 88, justifyContent: 'center', marginTop: 30, width: 88 }, name: { fontFamily: 'Lora_700Bold', fontSize: 20, marginTop: 4 }, email: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 12 }, warning: { borderRadius: 17, borderWidth: 1, gap: 15, marginTop: 24, padding: 16, width: '100%' }, warningText: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 12, lineHeight: 18, textAlign: 'center' }, google: { alignItems: 'center', borderRadius: 10, flexDirection: 'row', gap: 8, justifyContent: 'center', paddingVertical: 11 }, googleText: { fontFamily: 'PlusJakartaSans_700Bold', fontSize: 12 }, menu: { alignItems: 'center', borderRadius: 15, borderWidth: 1, flexDirection: 'row', justifyContent: 'space-between', marginTop: 4, padding: 16, width: '100%' }, menuLabel: { alignItems: 'center', flexDirection: 'row', gap: 11 }, menuText: { fontFamily: 'PlusJakartaSans_600SemiBold', fontSize: 14 } });

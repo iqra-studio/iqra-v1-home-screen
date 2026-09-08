@@ -1,0 +1,15 @@
+import { StyleSheet, Text, View } from 'react-native';
+
+import { themes } from '@/theme/colors';
+import { useTheme } from '@/theme/ThemeContext';
+import Icon from './Icon';
+
+type Day = { day: string; state: 'done' | 'missed' | 'empty' };
+type Props = { streakCount: number; status: string; weekData: Day[]; visible: boolean };
+export default function WeeklyReading({ streakCount, status, weekData, visible }: Props) {
+  const { theme } = useTheme();
+  if (!visible) return null;
+  return <View style={[styles.card, { backgroundColor: theme.secondary, borderColor: theme.cardBorder }]}><View style={[styles.iconCircle, { backgroundColor: theme.weeklyReadingIcon_10, borderColor: theme.weeklyReadingIcon_25 }]}><Icon name="sprout" size={25} color={theme.weeklyReadingIcon} /></View><View style={styles.info}><Text style={[styles.title, { color: theme.textPrimary }]}>1-{streakCount} Günlük</Text><Text style={[styles.title, { color: theme.textPrimary }]}>Okuma Serisi</Text><View style={[styles.statusBadge, { backgroundColor: theme.accentSoft }]}><Text style={[styles.status, { color: theme.accent }]}>{status}</Text></View><Text style={[styles.quote, { color: theme.textMuted }]}>"İlk adımı attın...</Text></View><View style={styles.days}>{weekData.map((item, index) => { const completed = item.state === 'done'; const missed = item.state === 'missed'; return <View key={`${item.day}-${index}`} style={styles.day}><View style={[styles.dot, { backgroundColor: completed ? theme.weeklyReadingIcon : 'transparent', borderColor: completed ? theme.weeklyReadingIcon : missed ? theme.waqfSign : theme.cardBorder }]}><Icon name={missed ? 'xmark' : 'checkmark'} size={11} color={completed ? themes.global.white : missed ? theme.waqfSign : theme.textMuted} /></View><Text style={[styles.dayText, { color: theme.textMuted }]}>{item.day}</Text></View>; })}</View></View>;
+}
+
+const styles = StyleSheet.create({ card: { alignItems: 'center', borderRadius: 17, borderWidth: 1, flexDirection: 'row', minHeight: 112, paddingHorizontal: 13, paddingVertical: 12 }, iconCircle: { alignItems: 'center', borderRadius: 22, borderWidth: 1, height: 43, justifyContent: 'center', width: 43 }, info: { alignSelf: 'stretch', flex: 1, justifyContent: 'center', marginLeft: 12 }, title: { fontFamily: 'Lora_700Bold', fontSize: 15, lineHeight: 18 }, statusBadge: { alignSelf: 'flex-start', borderRadius: 5, marginTop: 7, paddingHorizontal: 8, paddingVertical: 3 }, status: { fontFamily: 'PlusJakartaSans_700Bold', fontSize: 10 }, quote: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 11, fontStyle: 'italic', marginTop: 6 }, days: { alignItems: 'center', flexDirection: 'row', gap: 7 }, day: { alignItems: 'center', gap: 6 }, dot: { alignItems: 'center', borderRadius: 13, borderWidth: 1, height: 25, justifyContent: 'center', width: 25 }, dayText: { fontFamily: 'PlusJakartaSans_500Medium', fontSize: 9 } });

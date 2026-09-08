@@ -1,0 +1,12 @@
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+
+import { useTheme } from '@/theme/ThemeContext';
+import Icon from './Icon';
+
+type Props = { arabicText: string; meaning: string; source: string; onPlay: () => void; onCopy: () => void; onShare: () => void; onOpenSurah: () => void };
+export default function DailyVerse({ arabicText, meaning, source, onPlay, onCopy, onShare, onOpenSurah }: Props) {
+  const { theme } = useTheme();
+  return <View style={[styles.card, { backgroundColor: theme.cardBg, borderColor: theme.cardBorder }]}><View style={styles.top}><View style={styles.label}><Icon name="star.fill" size={13} color={theme.gold} /><Text style={[styles.heading, { color: theme.textPrimary }]}>Günün Ayeti</Text></View><Text style={[styles.source, { color: theme.textMuted }]}>{source}</Text></View><Text style={[styles.arabic, { color: theme.textPrimary }]}>{arabicText}</Text><Text style={[styles.meaning, { color: theme.textSecondary }]}>&quot;{meaning}&quot;</Text><View style={styles.bottom}><View style={styles.actions}><Pressable onPress={onPlay} style={[styles.action, { borderColor: theme.cardBorder }]}><Icon name="play.fill" size={13} color={theme.textSecondary} /></Pressable><Pressable onPress={onCopy} style={[styles.action, { borderColor: theme.cardBorder }]}><Icon name="doc.on.doc" size={13} color={theme.textSecondary} /></Pressable><Pressable onPress={onShare} style={[styles.action, { borderColor: theme.cardBorder }]}><Icon name="square.and.arrow.up" size={13} color={theme.textSecondary} /></Pressable></View><Pressable onPress={onOpenSurah}><Text style={[styles.open, { color: theme.accent }]}>Sureyi Aç ›</Text></Pressable></View></View>;
+}
+
+const styles = StyleSheet.create({ card: { borderRadius: 17, borderWidth: 1, gap: 13, padding: 15 }, top: { flexDirection: 'row', justifyContent: 'space-between' }, label: { alignItems: 'center', flexDirection: 'row', gap: 6 }, heading: { fontFamily: 'PlusJakartaSans_700Bold', fontSize: 11 }, source: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 9 }, arabic: { fontFamily: 'AmiriQuran_400Regular', fontSize: 22, textAlign: 'right' }, meaning: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 10, fontStyle: 'italic', lineHeight: 16 }, bottom: { alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' }, actions: { flexDirection: 'row', gap: 7 }, action: { alignItems: 'center', borderRadius: 8, borderWidth: 1, height: 27, justifyContent: 'center', width: 27 }, open: { fontFamily: 'PlusJakartaSans_600SemiBold', fontSize: 10 } });
