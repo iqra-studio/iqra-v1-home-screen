@@ -7,16 +7,9 @@ import { useTheme } from '@/theme/ThemeContext';
 
 const samples = [
   ['HASENAT', 'ArabicHasenat'],
-  ['SIMPO', 'ArabicSimpo'],
-  ['TRADBDO', 'ArabicTradbdo'],
-  ['ARTRO', 'ArabicArtro'],
   ['MAJALLA', 'ArabicMajalla'],
-  ['SIMPBDO', 'ArabicSimpbdo'],
   ['ARABTYPE', 'ArabicArabtype'],
-  ['ARTRBDO', 'ArabicArtrbdo'],
   ['HASENAT4', 'ArabicHasenat4'],
-  ['Shaikh Hamdullah Basic Volt', 'ArabicShaikhHamdullahBasicVolt'],
-  ['TRADO', 'ArabicTrado'],
   ['MAJALLAB', 'ArabicMajallab'],
 ] as const;
 
@@ -40,7 +33,7 @@ export default function ArabicFontLabScreen() {
         </View>
         <Text style={[styles.description, { color: theme.textSecondary }]}>Aynı Kur’an pasajlarını klasördeki fontlarla karşılaştırın.</Text>
         <View style={[styles.notice, { backgroundColor: theme.accentLight, borderColor: theme.accentSoft }]}>
-          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Zilzal suresi API’den yükleniyor...' : hasError ? 'API metni yüklenemedi.' : `${samples.length} font, ${ayahs.length} ayet ile hazır.`}</Text>
+          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Fatiha suresi yerel veritabanından yükleniyor...' : hasError ? 'Yerel ayet metni yüklenemedi.' : `${samples.length} font, ${ayahs.length} Fatiha ayeti ile hazır.`}</Text>
         </View>
         <View style={styles.list}>
           {samples.map(([name, family], index) => (

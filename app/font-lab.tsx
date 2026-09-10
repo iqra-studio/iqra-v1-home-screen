@@ -7,130 +7,140 @@ import { useTheme } from '@/theme/ThemeContext';
 
 const samples = [
   {
-    name: 'Noto Naskh Arabic',
-    family: 'NotoNaskhArabic',
-    note: 'Akıcı nesih gövde metni',
+    name: 'HafsNastaleeq_Ver10',
+    family: 'HafsNastaleeq_Ver10',
+    note: 'Hafs Nastaleeq Ver10 mushaf fontu',
+  },
+  // {
+  //   name: 'HafsNastaleeq_Ver102',
+  //   family: 'Nastaleeq-Regular',
+  //   note: 'Hafs Nastaleeq Ver10 mushaf fontu',
+  // },
+  // {
+  //   name: 'KFGQPCHAFSRegulaFix',
+  //   family: 'KFGQPCHAFSRegulaFix',
+  //   note: 'Hafs yazı karakteri',
+  // },
+  // {
+  //   name: 'KFGQPCHAFSRegulaFix2',
+  //   family: 'KFGQPCHAFSRegulaFix2',
+  //   note: 'Hafs yazı karakteri',
+  // },
+  // {
+  //   name: 'Uthmanic Hafs 1 Ver09',
+  //   family: 'UthmanicHafs1Ver09',
+  //   note: 'Uthmanic Hafs 1 Ver09 mushaf fontu',
+  // },
+  // {
+  //   name: 'Iqra KFGQPC Regular',
+  //   family: 'IqraKFGQPCRegular',
+  //   note: 'Real App Font',
+  // },
+   {
+    name: 'Iqra KFGQPC Regular 2',
+    family: 'IqraKFGQPCRegular2',
+    note: 'Real App Font',
   },
   {
-    name: 'Noto Sans Arabic',
-    family: 'NotoSansArabic',
-    note: 'Modern, sade ekran metni',
+    name: 'Duzeltilmis Font',
+    family: 'DuzeltilmisFont',
+    note: 'Duzeltilmis Font',
+  },
+   {
+    name: 'Duzeltilmis Font 2',
+    family: 'DuzeltilmisFont2',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'KFGQPC Uthman Taha Naskh',
-    family: 'KFGQPCUthmanTahaNaskh',
-    note: 'QCF4 mushaf fontu ile deneme',
+    name: 'Duzeltilmis Font 4',
+    family: 'DuzeltilmisFont4',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'KFGQPC Uthmanic Script HAFS',
-    family: 'KFGQPCUthmanicScriptHafs',
-    note: 'Hafs yazı karakteri',
+    name: 'Duzeltilmis Font 5',
+    family: 'DuzeltilmisFont5',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'Shaikh Hamdullah Mushaf',
-    family: 'Shaikh Hamdullah Mushaf',
-    note: 'Osmanlı mushaf yazı karakteri',
+    name: 'Duzeltilmis Font 6',
+    family: 'DuzeltilmisFont6',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'Hüsrev Hattı Arapça',
-    family: 'HusrevHattiArabca',
-    note: 'Hüsrev hattı Arapça yazı karakteri',
+    name: 'Duzeltilmis Font 7',
+    family: 'DuzeltilmisFont7',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'Hüsrev Hattı Osmanlıca',
-    family: 'HusrevHattiOsmanlica',
-    note: 'Hüsrev hattı Osmanlıca yazı karakteri',
+    name: 'Duzeltilmis Font 8',
+    family: 'DuzeltilmisFont8',
+    note: 'Duzeltilmis Font',
   },
   {
-    name: 'Scheherazade New',
+    name: 'Duzeltilmis Font 9',
+    family: 'Final',
+    note: 'Duzeltilmis Font',
+  },
+  // {
+  //   name: 'Shaikh Hamdullah Mushaf',
+  //   family: 'Shaikh Hamdullah Mushaf',
+  //   note: 'Osmanlı mushaf yazı karakteri',
+  // },
+  // {
+  //   name: 'Al-Qalam',
+  //   family: 'AlQalam',
+  //   note: 'Al-Qalam Arapça yazı karakteri',
+  // },
+  // {
+  //   name: 'PDMS Saleem Quran',
+  //   family: 'PDMSaleemQuran',
+  //   note: 'Kur’an metinleri için tasarlanmış yazı karakteri',
+  // },
+  // {
+  //   name: 'me_quran Regular',
+  //   family: 'MeQuranRegular',
+  //   note: 'Kur’an metni için me_quran yazı karakteri',
+  // },
+  // {
+  //   name: 'Kuran Kerim Font Abay',
+  //   family: 'KuranKerimFontAbay',
+  //   note: 'Abay Kur’an fontu',
+  // },
+  // {
+  //   name: 'Kuran Kerim Font Hamdullah',
+  //   family: 'KuranKerimFontHamdullah',
+  //   note: 'Hamdullah Kur’an fontu',
+  // },
+  // {
+  //   name: 'Kuran Kerim Font Latif',
+  //   family: 'KuranKerimFontLatif',
+  //   note: 'Latif Kur’an fontu',
+  // },
+  {
+    name: 'Kuran Kerim Font ScheherazadeNew',
     family: 'ScheherazadeNew',
-    note: 'Arapça ve Kur’an metinleri için tasarlanmış aile',
+    note: 'ScheherazadeNew Arapça yazı karakteri',
   },
-  {
-    name: 'Lateef',
-    family: 'Lateef',
-    note: 'Arapça metinler için Google Fonts ailesi',
-  },
-  {
-    name: 'Al-Qalam',
-    family: 'AlQalam',
-    note: 'Al-Qalam Arapça yazı karakteri',
-  },
-  {
-    name: 'PDMS Saleem Quran',
-    family: 'PDMSaleemQuran',
-    note: 'Kur’an metinleri için tasarlanmış yazı karakteri',
-  },
-  {
-    name: 'TradNaskh HHK Nokta Regular',
-    family: 'TradNaskhHHKNokta',
-    note: 'Noktalı nesih Arapça yazı karakteri',
-  },
-  {
-    name: 'Kuran Kerim Font Latif',
-    family: 'KuranKerimFontLatif',
-    note: 'Latif Kur’an fontu',
-  },
-  {
-    name: 'Kuran Kerim Font Hamdullah',
-    family: 'KuranKerimFontHamdullah',
-    note: 'Hamdullah Kur’an fontu',
-  },
-  {
-    name: 'Kuran Kerim Font Abay',
-    family: 'KuranKerimFontAbay',
-    note: 'Abay Kur’an fontu',
-  },
-  {
-    name: 'Amiri Quran Colored',
-    family: 'AmiriQuranColored',
-    note: 'Amiri Quran tabanlı deneme',
-  },
-  {
-    name: 'Amiri Regular',
-    family: 'Amiri_400Regular',
-    note: 'Klasik Arapça metin gövdesi',
-  },
-  {
-    name: 'Amiri Bold',
-    family: 'Amiri_700Bold',
-    note: 'Klasik Arapça kalın ağırlık',
-  },
-  {
-    name: 'Amiri Quran Regular',
-    family: 'AmiriQuran_400Regular',
-    note: 'Kur’an metni için tasarlanmış aile',
-  },
-  {
-    name: 'Lora Regular',
-    family: 'Lora_400Regular',
-    note: 'Arapça glif fallback davranışı',
-  },
-  {
-    name: 'Lora Bold',
-    family: 'Lora_700Bold',
-    note: 'Arapça glif fallback davranışı',
-  },
-  {
-    name: 'Plus Jakarta Sans Regular',
-    family: 'PlusJakartaSans_400Regular',
-    note: 'Arapça glif fallback davranışı',
-  },
-  {
-    name: 'Plus Jakarta Sans Medium',
-    family: 'PlusJakartaSans_500Medium',
-    note: 'Arapça glif fallback davranışı',
-  },
-  {
-    name: 'Plus Jakarta Sans SemiBold',
-    family: 'PlusJakartaSans_600SemiBold',
-    note: 'Arapça glif fallback davranışı',
-  },
-  {
-    name: 'Plus Jakarta Sans Bold',
-    family: 'PlusJakartaSans_700Bold',
-    note: 'Arapça glif fallback davranışı',
-  },
+  // {
+  //   name: 'Hüsrev Hattı Arabca',
+  //   family: 'HusrevHattiArabca',
+  //   note: 'Hüsrev Hattı Arabca yazı karakteri',
+  // },
+  // {
+  //   name: 'Hüsrev Hattı Osmanlıca',
+  //   family: 'HusrevHattiOsmanlica',
+  //   note: 'Hüsrev Hattı Osmanlıca yazı karakteri',
+  // },
+  // {
+  //   name: 'Amiri Regular',
+  //   family: 'Amiri_400Regular',
+  //   note: 'Klasik Arapça metin gövdesi',
+  // },
+  // {
+  //   name: 'Amiri Quran Regular',
+  //   family: 'AmiriQuran_400Regular',
+  //   note: 'Kur’an metni için tasarlanmış aile',
+  // },
 ] as const;
 
 export default function FontLabScreen() {
@@ -158,7 +168,7 @@ export default function FontLabScreen() {
         </Text>
 
         <View style={[styles.notice, { backgroundColor: theme.accentLight, borderColor: theme.accentSoft }]}>
-          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Zilzal suresi API’den yükleniyor...' : hasError ? 'API metni yüklenemedi.' : `${ayahs.length} ayet API’den yüklendi.`}</Text>
+          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Fatiha suresi yerel veritabanından yükleniyor...' : hasError ? 'Yerel ayet metni yüklenemedi.' : `${ayahs.length} Fatiha ayeti yüklendi.`}</Text>
         </View>
 
         <View style={styles.list}>
@@ -175,6 +185,7 @@ export default function FontLabScreen() {
                 {ayahs.map((ayah) => (
                   <Text key={ayah.numberInSurah} style={[styles.arabic, { color: theme.textPrimary, fontFamily: sample.family }]}>{ayah.text}</Text>
                 ))}
+                {/* <Text style={[styles.arabic, { color: theme.textPrimary, fontFamily: sample.family }]}>{'ﱁ ﱂ ﱃ ﱄ ﱅ'}</Text> */}
               </View>
             </View>
           ))}
@@ -203,6 +214,12 @@ const styles = StyleSheet.create({
   sampleMeta: { flex: 1, gap: 3 },
   sampleName: { fontFamily: 'PlusJakartaSans_600SemiBold', fontSize: 13 },
   sampleNote: { fontFamily: 'PlusJakartaSans_400Regular', fontSize: 10 },
-  arabicBlock: { borderTopWidth: 1, gap: 4, marginTop: 13, paddingHorizontal: 15, paddingVertical: 14 },
-  arabic: { fontSize: 25, textAlign: 'right' },
+  arabicBlock: { borderTopWidth: 1, gap: 4, marginTop: 13, paddingHorizontal: 15, paddingVertical: 14, },
+  arabic: { 
+    fontSize: 26,
+    lineHeight: 56, 
+    textAlign: 'right',
+    writingDirection: 'rtl',
+    fontVariant: ['tabular-nums'],
+  },
 });

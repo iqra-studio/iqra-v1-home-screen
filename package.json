@@ -21,6 +21,7 @@
     "expo-symbols": "~57.0.2",
     "expo-web-browser": "~57.0.2",
     "lucide-react-native": "^1.41.0",
+    "mysql2": "^3.24.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
@@ -37,6 +38,7 @@
   },
   "scripts": {
     "start": "expo start",
+    "quran-api": "node server/quran-api.cjs",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"

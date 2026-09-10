@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const quranApiUrl = 'https://api.alquran.cloud/v1/surah/99/quran-simple';
+const quranApiUrl = process.env.EXPO_PUBLIC_QURAN_API_URL || 'http://192.168.115.251:3001/v1/surah/99';
 
 export type QuranAyah = {
   numberInSurah: number;

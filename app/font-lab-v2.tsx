@@ -25,7 +25,7 @@ export default function FontLabV2Screen() {
         </View>
         <Text style={[styles.description, { color: theme.textSecondary }]}>Yeni fontu Kur’an pasajlarında ayrı bir ekranda deneyin.</Text>
         <View style={[styles.notice, { backgroundColor: theme.accentLight, borderColor: theme.accentSoft }]}>
-          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Zilzal suresi API’den yükleniyor...' : hasError ? 'API metni yüklenemedi.' : `${ayahs.length} ayet API’den yüklendi.`}</Text>
+          <Text style={[styles.noticeText, { color: theme.textSecondary }]}>{isLoading ? 'Fatiha suresi yerel veritabanından yükleniyor...' : hasError ? 'Yerel ayet metni yüklenemedi.' : `${ayahs.length} Fatiha ayeti yüklendi.`}</Text>
         </View>
         <Pressable onPress={() => router.push('/qcf-bsml-lab' as never)} style={[styles.qcfButton, { backgroundColor: theme.accentLight, borderColor: theme.accentSoft }]}>
           <View style={styles.qcfCopy}>
