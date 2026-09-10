@@ -7,140 +7,40 @@ import { useTheme } from '@/theme/ThemeContext';
 
 const samples = [
   {
-    name: 'HafsNastaleeq_Ver10',
-    family: 'HafsNastaleeq_Ver10',
-    note: 'Hafs Nastaleeq Ver10 mushaf fontu',
-  },
-  // {
-  //   name: 'HafsNastaleeq_Ver102',
-  //   family: 'Nastaleeq-Regular',
-  //   note: 'Hafs Nastaleeq Ver10 mushaf fontu',
-  // },
-  // {
-  //   name: 'KFGQPCHAFSRegulaFix',
-  //   family: 'KFGQPCHAFSRegulaFix',
-  //   note: 'Hafs yazı karakteri',
-  // },
-  // {
-  //   name: 'KFGQPCHAFSRegulaFix2',
-  //   family: 'KFGQPCHAFSRegulaFix2',
-  //   note: 'Hafs yazı karakteri',
-  // },
-  // {
-  //   name: 'Uthmanic Hafs 1 Ver09',
-  //   family: 'UthmanicHafs1Ver09',
-  //   note: 'Uthmanic Hafs 1 Ver09 mushaf fontu',
-  // },
-  // {
-  //   name: 'Iqra KFGQPC Regular',
-  //   family: 'IqraKFGQPCRegular',
-  //   note: 'Real App Font',
-  // },
-   {
-    name: 'Iqra KFGQPC Regular 2',
-    family: 'IqraKFGQPCRegular2',
-    note: 'Real App Font',
-  },
-  {
-    name: 'Duzeltilmis Font',
-    family: 'DuzeltilmisFont',
-    note: 'Duzeltilmis Font',
-  },
-   {
-    name: 'Duzeltilmis Font 2',
-    family: 'DuzeltilmisFont2',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 4',
-    family: 'DuzeltilmisFont4',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 5',
-    family: 'DuzeltilmisFont5',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 6',
-    family: 'DuzeltilmisFont6',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 7',
-    family: 'DuzeltilmisFont7',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 8',
-    family: 'DuzeltilmisFont8',
-    note: 'Duzeltilmis Font',
-  },
-  {
-    name: 'Duzeltilmis Font 9',
+    name: 'Final',
     family: 'Final',
-    note: 'Duzeltilmis Font',
+    note: 'Final Kur’an fontu',
   },
-  // {
-  //   name: 'Shaikh Hamdullah Mushaf',
-  //   family: 'Shaikh Hamdullah Mushaf',
-  //   note: 'Osmanlı mushaf yazı karakteri',
-  // },
-  // {
-  //   name: 'Al-Qalam',
-  //   family: 'AlQalam',
-  //   note: 'Al-Qalam Arapça yazı karakteri',
-  // },
-  // {
-  //   name: 'PDMS Saleem Quran',
-  //   family: 'PDMSaleemQuran',
-  //   note: 'Kur’an metinleri için tasarlanmış yazı karakteri',
-  // },
-  // {
-  //   name: 'me_quran Regular',
-  //   family: 'MeQuranRegular',
-  //   note: 'Kur’an metni için me_quran yazı karakteri',
-  // },
-  // {
-  //   name: 'Kuran Kerim Font Abay',
-  //   family: 'KuranKerimFontAbay',
-  //   note: 'Abay Kur’an fontu',
-  // },
-  // {
-  //   name: 'Kuran Kerim Font Hamdullah',
-  //   family: 'KuranKerimFontHamdullah',
-  //   note: 'Hamdullah Kur’an fontu',
-  // },
-  // {
-  //   name: 'Kuran Kerim Font Latif',
-  //   family: 'KuranKerimFontLatif',
-  //   note: 'Latif Kur’an fontu',
-  // },
+  {
+    name: 'Al-Qalam',
+    family: 'AlQalam',
+    note: 'Al-Qalam Arapça yazı karakteri',
+  },
+  {
+    name: 'PDMS Saleem Quran',
+    family: 'PDMSaleemQuran',
+    note: 'Kur’an metinleri için tasarlanmış yazı karakteri',
+  },
+  {
+    name: 'Kuran Kerim Font Latif',
+    family: 'KuranKerimFontLatif',
+    note: 'Latif Kur’an fontu',
+  },
   {
     name: 'Kuran Kerim Font ScheherazadeNew',
     family: 'ScheherazadeNew',
     note: 'ScheherazadeNew Arapça yazı karakteri',
   },
-  // {
-  //   name: 'Hüsrev Hattı Arabca',
-  //   family: 'HusrevHattiArabca',
-  //   note: 'Hüsrev Hattı Arabca yazı karakteri',
-  // },
-  // {
-  //   name: 'Hüsrev Hattı Osmanlıca',
-  //   family: 'HusrevHattiOsmanlica',
-  //   note: 'Hüsrev Hattı Osmanlıca yazı karakteri',
-  // },
-  // {
-  //   name: 'Amiri Regular',
-  //   family: 'Amiri_400Regular',
-  //   note: 'Klasik Arapça metin gövdesi',
-  // },
-  // {
-  //   name: 'Amiri Quran Regular',
-  //   family: 'AmiriQuran_400Regular',
-  //   note: 'Kur’an metni için tasarlanmış aile',
-  // },
+  {
+    name: 'Hasenat',
+    family: 'ArabicHasenat',
+    note: 'Hasenat Arapça yazı karakteri',
+  },
+  {
+    name: 'Majalla',
+    family: 'ArabicMajalla',
+    note: 'Majalla Arapça yazı karakteri',
+  },
 ] as const;
 
 export default function FontLabScreen() {
