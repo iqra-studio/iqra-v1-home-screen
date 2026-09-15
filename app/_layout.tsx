@@ -27,13 +27,12 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    Final: require('../assets/fonts/final.ttf'),
-    ScheherazadeNew: require('../assets/fonts/ScheherazadeNew-Regular.ttf'),
-    AlQalam: require('../assets/fonts/Al-Qalam.ttf'),
-    PDMSaleemQuran: require('../assets/fonts/PDMS-Saleem-QuranFont.ttf'),
-    KuranKerimFontLatif: require('../assets/fonts/KuranKerimFontLatif.ttf'),
-    ArabicHasenat: require('../assets/fonts/hasenat.ttf'),
-    ArabicMajalla: require('../assets/fonts/majalla.ttf'),
+    Iqra: require('../assets/fonts/iqra.ttf'),
+    Latif: require('../assets/fonts/latif.ttf'),
+    ScheherazadeNew: require('../assets/fonts/scheherazadeNew.ttf'),
+    Hasenat: require('../assets/fonts/hasenat.ttf'),
+    Majalla: require('../assets/fonts/majalla.ttf'),
+
     Cinzel_700Bold,
     PlusJakartaSans_400Regular,
     PlusJakartaSans_500Medium,
