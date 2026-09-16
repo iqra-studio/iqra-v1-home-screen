@@ -2,6 +2,7 @@ import { Alert, ScrollView, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useTheme } from "@/theme/ThemeContext";
+import BackgroundEmblem from "./home/BackgroundEmblem";
 import ContinueReading from "./home/ContinueReading";
 import DailyVerse from "./home/DailyVerse";
 import QuoteFooter from "./home/Footer";
@@ -15,6 +16,7 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   return (
     <View style={[styles.screen, { backgroundColor: theme.main }]}>
+      <BackgroundEmblem />
       <View style={[styles.headerContainer, { paddingTop: insets.top + 26 }]}>
         <Header />
       </View>

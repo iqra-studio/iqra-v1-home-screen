@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, Text, View } from "react-native";
 
 import { useTheme } from "@/theme/ThemeContext";
@@ -12,14 +13,24 @@ export default function QuoteFooter({ quote, source }: QuoteFooterProps) {
   const { theme } = useTheme();
 
   return (
-    <View style={[styles.container]}>
+    <View style={styles.container}>
       <View style={styles.dividerRow}>
-        <View style={[styles.line, { backgroundColor: theme.cardBorder }]} />
+        <LinearGradient
+          colors={["transparent", theme.cardBorder]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.line}
+        />
         <View style={styles.ornament}>
           <Icon name="flower" size={14} color={theme.accent} />
         </View>
         {/* <Text style={[styles.ornament, { color: theme.accent }]}>❋</Text> */}
-        <View style={[styles.line, { backgroundColor: theme.cardBorder }]} />
+        <LinearGradient
+          colors={[theme.cardBorder, "transparent"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.line}
+        />
       </View>
 
       <Text style={[styles.quote, { color: theme.textSecondary }]}>
