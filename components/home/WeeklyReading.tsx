@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   },
   dayCol: {
     alignItems: "center",
-    gap: 2,
+    gap: 4,
   },
   dot: {
     width: 20,

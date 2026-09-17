@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   line: {
     flex: 1,
-    height: 1.5,
+    height: 2,
   },
   ornament: {
     marginHorizontal: 10,

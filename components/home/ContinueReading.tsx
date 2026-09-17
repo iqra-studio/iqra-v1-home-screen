@@ -58,7 +58,7 @@ export default function ContinueReading({
               { color: isDarkTheme ? theme.accent : themes.global.white_90 },
             ]}
           >
-            KALDIĞINIZ SURE
+            KALDIĞINIZ YER
           </Text>
         </View>
         <Text
@@ -72,7 +72,12 @@ export default function ContinueReading({
           Cüz {juz} • Sayfa {page}
         </Text>
       </View>
-      <View style={styles.titleRow}>
+      <View
+        style={[
+          styles.titleRow,
+          { borderColor: isDarkTheme ? theme.textMuted : theme.accentLight },
+        ]}
+      >
         <View>
           <Text
             style={[
@@ -141,7 +146,7 @@ export default function ContinueReading({
             { color: isDarkTheme ? theme.cardBg : theme.accent },
           ]}
         >
-          Okumaya Başla
+          Okumaya Devam Et
         </Text>
       </Pressable>
     </View>
@@ -184,13 +189,15 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   preview: {
-    fontFamily: "Iqra",
-    lineHeight: 60,
-    fontSize: 24,
-    textAlign: "right",
+    paddingVertical: 10,
     paddingHorizontal: 10,
+    fontFamily: "Hasenat",
+    lineHeight: 45,
+    fontSize: 22,
+    textAlign: "justify",
     borderRadius: 12,
     borderWidth: 1,
+    direction: "rtl",
   },
   button: {
     alignItems: "flex-end",
