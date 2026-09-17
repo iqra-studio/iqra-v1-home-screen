@@ -40,12 +40,14 @@ export default function QuickAccess({ items }: { items: QuickAccessItem[] }) {
             >
               <Icon name={item.icon} size={17} color={theme.accent} />
             </View>
-            <Text style={[styles.label, { color: theme.textPrimary }]}>
-              {item.label}
-            </Text>
-            <Text style={[styles.count, { color: theme.textMuted }]}>
-              {item.count}
-            </Text>
+            <View style={{ alignItems: "center", gap: 3 }}>
+              <Text style={[styles.label, { color: theme.textPrimary }]}>
+                {item.label}
+              </Text>
+              <Text style={[styles.count, { color: theme.textMuted }]}>
+                {item.count}
+              </Text>
+            </View>
           </Pressable>
         ))}
       </View>
@@ -60,13 +62,13 @@ const styles = StyleSheet.create({
     fontSize: 11,
     textTransform: "uppercase",
   },
-  grid: { flexDirection: "row", gap: 8 },
+  grid: { flexDirection: "row", gap: 10 },
   item: {
     alignItems: "center",
     borderRadius: 14,
     borderWidth: 1,
     flex: 1,
-    gap: 5,
+    gap: 10,
     paddingHorizontal: 4,
     paddingVertical: 12,
   },
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
     fontFamily: "PlusJakartaSans_600SemiBold",
     fontSize: 10,
     textAlign: "center",
-    letterSpacing: 0.5,
+    letterSpacing: 0.3,
   },
   count: { fontFamily: "PlusJakartaSans_400Regular", fontSize: 9 },
 });

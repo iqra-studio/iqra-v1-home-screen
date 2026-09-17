@@ -37,9 +37,9 @@ export default function HomeScreen() {
         <QuickAccess
           items={[
             {
-              icon: "book",
-              label: "SURELER",
-              count: "114 Sure",
+              icon: "scroll",
+              label: "NAMAZ SURELERİ",
+              count: "11 Kısa Sure",
               onPress: () => {},
             },
             {
@@ -49,9 +49,9 @@ export default function HomeScreen() {
               onPress: () => {},
             },
             {
-              icon: "gearshape",
-              label: "AYARLAR",
-              count: "Tema seç",
+              icon: "compass",
+              label: "SECDE SURELERİ",
+              count: "14 Tilavet Secdesi",
               onPress: () => {},
             },
           ]}

@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   arabicName: {
     fontFamily: "Amiri_700Bold",
-    fontSize: 22,
+    fontSize: 24,
     lineHeight: 32,
     textAlign: "right",
   },

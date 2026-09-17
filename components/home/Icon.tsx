@@ -6,6 +6,7 @@ import {
   Check,
   ChevronRight,
   CircleUserRound,
+  Compass,
   Copy,
   CornerDownRightIcon,
   Flame,
@@ -15,6 +16,7 @@ import {
   Mosque,
   Play,
   RotateCcwClock,
+  Scroll,
   Settings,
   Share2,
   SparklesIcon,
@@ -55,7 +57,9 @@ export type IconName =
   | "book"
   | "zap"
   | "trophy"
-  | "flower";
+  | "flower"
+  | "compass"
+  | "scroll";
 type IconProps = {
   name: IconName;
   size?: number;
@@ -90,6 +94,8 @@ const icons: Record<IconName, LucideIcon> = {
   zap: Zap,
   trophy: Trophy,
   flower: Flower,
+  compass: Compass,
+  scroll: Scroll,
 };
 
 export default function Icon({
